@@ -1,3 +1,5 @@
+@use '../../../styles/variables' as *;
+
 .fixed-background {
   position: absolute;
   top: 0;
@@ -9,6 +11,32 @@
   img {
     width: 100%;
 
+  }
+}
+
+.celestial-elements {
+  position: fixed;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.celestial {
+  width: 7vw;
+  min-width: 48px;
+  max-width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sun {
+  opacity: 0;
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -26,15 +54,13 @@
 }
 
 .hero-content {
-
-  background-color: #f9fafb;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: #111827 0px 25px 50px -12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
   .greeting {
     font-size: 1.25rem;
-    color: #2563eb;
+    color: $primary;
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
@@ -43,21 +69,21 @@
   .name {
     font-size: 4rem;
     font-weight: 800;
-    color: #111827;
+    color: $text-primary;
     margin: 0;
     line-height: 1.1;
   }
 
   .title {
     font-size: 2rem;
-    color: #6b7280;
+    color: $text-secondary;
     margin: 0.5rem 0 1.5rem;
     font-weight: 600;
   }
 
   .description {
     font-size: 1.125rem;
-    color: #4b5563;
+    color: $text-tertiary;
     line-height: 1.75;
     max-width: 500px;
     margin-bottom: 2rem;
@@ -78,22 +104,22 @@
   }
 
   .btn-primary {
-    background: #2563eb;
+    background: $primary;
     color: white;
 
     &:hover {
-      background: #1d4ed8;
+      background: $primary-hover;
       transform: translateY(-2px);
     }
   }
 
   .btn-secondary {
     background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: $primary;
+    border: 2px solid $primary;
 
     &:hover {
-      background: #2563eb;
+      background: $primary;
       color: white;
       transform: translateY(-2px);
     }
@@ -105,11 +131,11 @@
   gap: 1rem;
 
   a {
-    color: #6b7280;
+    color: $text-secondary;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #2563eb;
+      color: $primary;
       transform: translateY(-2px);
     }
   }
@@ -122,7 +148,7 @@
 }
 
 .code-block {
-  background: #1e293b;
+  background: $bg-dark;
   border-radius: 12px;
   padding: 1.5rem;
   width: 100%;
@@ -139,9 +165,9 @@
       height: 12px;
       border-radius: 50%;
 
-      &.red { background: #ef4444; }
-      &.yellow { background: #f59e0b; }
-      &.green { background: #22c55e; }
+      &.red { background: $code-red; }
+      &.yellow { background: $code-yellow; }
+      &.green { background: $code-green; }
     }
   }
 
@@ -152,15 +178,15 @@
     code {
       font-family: 'Fira Code', monospace;
       font-size: 0.9rem;
-      color: #e2e8f0;
+      color: $text-code;
       line-height: 1.6;
     }
   }
 
-  .keyword { color: #c084fc; }
-  .variable { color: #38bdf8; }
-  .property { color: #a5b4fc; }
-  .string { color: #86efac; }
+  .keyword { color: $code-keyword; }
+  .variable { color: $code-variable; }
+  .property { color: $code-property; }
+  .string { color: $code-string; }
 }
 
 @media (max-width: 1024px) {

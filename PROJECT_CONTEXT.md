@@ -10,7 +10,9 @@ Portafolio personal desarrollado con Angular 21. Es una aplicacion web de una so
 - **Lenguaje:** TypeScript 5.9.2
 - **Estilos:** SCSS con Angular Material (tema azure/blue)
 - **UI Components:** Angular Material CDK 21.2.9
+- **Animaciones:** GSAP 3.x
 - **Gestor de Paquetes:** npm 11.13.0
+- **Variables de Estilo:** `src/styles/_variables.scss`
 
 ## Estructura del Proyecto
 
@@ -107,7 +109,11 @@ Rutas configuradas en `app.routes.ts`:
 
 ## Notas para IA
 
-1. **No modificar directamente `app.html`** - Esta vacio, el contenido va en los componentes page/component
+1. **GSAP instalado** - Usar `import gsap from 'gsap'` para animaciones. Los componentes que usan GSAP deben implementar `AfterViewInit` y usar `@ViewChild` para referenciar elementos del DOM.
+2. **Scroll animations** - Usar `@HostListener('window:scroll')` para detectar scroll y `gsap.set()` para mover elementos.
+3. **Tema oscuro** - Agregar clase `dark-theme` al body. Los estilos se definen en `styles.scss`.
+4. **Variables de color** - Todos los colores están centralizados en `src/styles/_variables.scss`. Para usar en componentes: `@use '../../../styles/variables' as *;` y luego usar `$variable`.
+5. **No modificar directamente `app.html`** - Esta vacio, el contenido va en los componentes page/component
 2. **Cada componente es independiente** - Tienen su propia logica, template y estilos
 3. **Usar imports de Angular Material** - Si se necesitan componentes de Material, importarlos en el componente
 4. **SCSS** - Los estilos usan SCSS con variables y nesting
