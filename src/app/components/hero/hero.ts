@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, HostListener, signal } from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
@@ -11,7 +11,7 @@ import gsap from 'gsap';
 export class Hero implements AfterViewInit {
   @ViewChild('sun') sunRef!: ElementRef;
 
-  private isDarkMode = false;
+  readonly isDarkMode = signal(false);
   private baseX: number = 0;
   private maxScrollMovement: number = 0;
 
@@ -77,8 +77,8 @@ export class Hero implements AfterViewInit {
   }
 
   toggleTheme(): void {
-    this.isDarkMode = !this.isDarkMode;
-    document.body.classList.toggle('dark-theme', this.isDarkMode);
+    this.isDarkMode.update(v => !v);
+    document.body.classList.toggle('dark-theme', this.isDarkMode());
   }
 
   private initAnimations(): void {

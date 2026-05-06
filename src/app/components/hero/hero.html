@@ -5,7 +5,7 @@
 </div>
 
 <div class="celestial-elements">
-  <img #sun src="assets/sun.svg" alt="Sun" class="celestial sun" (click)="toggleTheme()" />
+  <img #sun [src]="isDarkMode() ? 'assets/moon.svg' : 'assets/sun.svg'" [alt]="isDarkMode() ? 'Moon' : 'Sun'" class="celestial sun" (click)="toggleTheme()" />
 </div>
 
   <div class="hero-content">

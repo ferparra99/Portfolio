@@ -38,14 +38,16 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 1s ease, color 1s ease;
 }
 
 body.dark-theme {
   background: $bg-darker;
   color: $text-light;
+  transition: background 1s ease, color 1s ease;
 
   .hero-content {
-    background-color: $bg-dark;
+    background-color: $bg-accent;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 
     .greeting {
