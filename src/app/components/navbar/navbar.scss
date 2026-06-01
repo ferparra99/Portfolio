@@ -1,12 +1,10 @@
-@use '../../../styles/variables' as *;
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-nav);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-nav);
   z-index: 1000;
   padding: 1rem 0;
 }
@@ -23,7 +21,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -36,12 +34,12 @@
 
   a {
     text-decoration: none;
-    color: $text-dark;
+    color: var(--text-primary);
     font-weight: 500;
     transition: color 0.3s ease;
 
     &:hover {
-      color: $primary;
+      color: var(--primary);
     }
   }
 }

@@ -1,0 +1,79 @@
+// ============================================
+// TOKENS DE DISEÑO - CSS Custom Properties
+// Mapeo semántico de colores por tema
+// ============================================
+@use 'palette' as *;
+
+:root {
+  // --- BACKGROUNDS ---
+  --bg-body: #{$light-bg-body};
+  --bg-card: #{$light-bg-card};
+  --bg-surface: #{$light-bg-surface};
+  --bg-nav: #{$light-bg-nav};
+  --bg-tag: #{$light-bg-tag};
+  --bg-footer: #{$light-bg-footer};
+  --bg-code: #{$bg-dark-code};
+
+  // --- TEXT ---
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --text-tertiary: #{$light-text-tertiary};
+  --text-muted: #{$light-text-muted};
+  --text-code: #{$text-code};
+
+  // --- BORDERS ---
+  --border: #{$light-border};
+  --border-input: #{$light-border-input};
+
+  // --- SHADOWS ---
+  --shadow-sm: #{$light-shadow-sm};
+  --shadow-nav: #{$light-shadow-nav};
+  --shadow-hero: #{$light-shadow-hero};
+  --shadow-card-hover: #{$light-shadow-card-hover};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-image: #{$shadow-image};
+
+  // --- BRAND / ACCENT (compartidos) ---
+  --primary: #{$primary};
+  --primary-hover: #{$primary-hover};
+  --primary-light: #{$primary-light};
+  --primary-lighter: #{$primary-lighter};
+  --accent-yellow: #{$accent-yellow};
+  --gradient-start: #{$accent-gradient-start};
+  --gradient-end: #{$accent-gradient-end};
+
+  // --- CODE SYNTAX (compartidos) ---
+  --code-keyword: #{$code-keyword};
+  --code-variable: #{$code-variable};
+  --code-property: #{$code-property};
+  --code-string: #{$code-string};
+  --code-red: #{$code-red};
+  --code-yellow: #{$code-yellow};
+  --code-green: #{$code-green};
+}
+
+body.dark-theme {
+  // --- BACKGROUNDS ---
+  --bg-body: #{$dark-bg-body};
+  --bg-card: #{$dark-bg-card};
+  --bg-surface: #{$dark-bg-surface};
+  --bg-nav: #{$dark-bg-nav};
+  --bg-tag: #{$dark-bg-tag};
+  --bg-footer: #{$dark-bg-footer};
+
+  // --- TEXT ---
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --text-tertiary: #{$dark-text-tertiary};
+  --text-muted: #{$dark-text-muted};
+
+  // --- BORDERS ---
+  --border: #{$dark-border};
+  --border-input: #{$dark-border-input};
+
+  // --- SHADOWS ---
+  --shadow-sm: #{$dark-shadow-sm};
+  --shadow-nav: #{$dark-shadow-nav};
+  --shadow-hero: #{$dark-shadow-hero};
+  --shadow-card-hover: #{$dark-shadow-card-hover};
+}

@@ -1,0 +1,60 @@
+// ============================================
+// PALETA DE COLORES - RAW VALUES
+// Valores crudos organizados por tema
+// ============================================
+
+// --- MODO CLARO ---
+$light-bg-body: linear-gradient(180deg, #FFF2D2 0%, #FCF2D8 12%, #F9F1DE 25%, #F2F0EB 65%);
+$light-bg-card: white;
+$light-bg-surface: #e5e7eb;
+$light-bg-nav: rgba(255, 255, 255, 0.95);
+$light-bg-tag: #f9fafbe1;
+$light-bg-footer: #111827;
+$light-text-primary: #111827;
+$light-text-secondary: #6b7280;
+$light-text-tertiary: #4b5563;
+$light-text-muted: #9ca3af;
+$light-border: #e5e7eb;
+$light-border-input: #d1d5db;
+$light-shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+$light-shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.1);
+$light-shadow-hero: 0 4px 20px rgba(0, 0, 0, 0.397);
+$light-shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+// --- MODO OSCURO ---
+$dark-bg-body: linear-gradient(180deg, #332E2E 0%, #332E2E 55%, #3F3D3D 75%, #515151 85%, #6D6D6D 100%);
+$dark-bg-card: rgba(255, 255, 255, 0.05);
+$dark-bg-surface: rgba(51, 46, 46, 0.8);
+$dark-bg-nav: rgba(51, 46, 46, 0.95);
+$dark-bg-tag: rgba(255, 255, 255, 0.08);
+$dark-bg-footer: transparent;
+$dark-text-primary: #f1f5f9;
+$dark-text-secondary: #cbd5e1;
+$dark-text-tertiary: #9ca3af;
+$dark-text-muted: #6b7280;
+$dark-border: #4b5563;
+$dark-border-input: #6b7280;
+$dark-shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.2);
+$dark-shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.3);
+$dark-shadow-hero: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+$dark-shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+// --- COMPARTIDOS (iguales en ambos modos) ---
+$primary: #424242;
+$primary-hover: #727272;
+$primary-light: #494d53;
+$primary-lighter: #999999;
+$accent-yellow: #ffce72;
+$accent-gradient-start: #667eea;
+$accent-gradient-end: #764ba2;
+$bg-dark-code: #1e1e1e;
+$code-keyword: #c084fc;
+$code-variable: #38bdf8;
+$code-property: #a5b4fc;
+$code-string: #86efac;
+$text-code: #e2e8f0;
+$code-red: #ef4444;
+$code-yellow: #f59e0b;
+$code-green: #22c55e;
+$shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-image: 0 20px 40px rgba(0, 0, 0, 0.2);
